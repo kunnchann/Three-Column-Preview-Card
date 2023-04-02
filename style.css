@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+:root {
+    --font-family-one: 'Lexend Deca', sans-serif;
+    --font-family-two: 'Big Shoulders Display', cursive;
+    --bright-color: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white-para: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    max-width: 1440px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+}
+.container div:nth-child(1)  {
+    border-radius: 5px 0 0 5px;
+    background-color: var(--bright-color);
+}
+.container div:nth-child(2) {
+    background-color: var(--dark-cyan);
+}
+.container div:nth-child(3) {
+    background-color: var(--very-dark-cyan);
+    border-radius: 0 5px 5px 0;
+}
+.container div {
+    padding: 55px 45px;
+}
+.container div > h1 {
+    font-family: var(--font-family-two);
+    font-weight: 700;
+    color: white;
+    letter-spacing: 1px;
+}
+.container div  p {
+    font-size: 15px;
+    color: var(--transparent-white-para);
+    font-family: var(--font-family-one);
+    font-weight: 400;
+    width: 198px;
+    line-height: 24px;
+}
+.container div button {
+    cursor: pointer;
+    border: none;
+    padding: 12px 33px;
+    font-family: var(--font-family-one);
+    color: white;
+    border-radius: 20px;
+}
+.container div:nth-child(1) button {
+    color: var(--bright-color);
+}
+.container div:nth-child(2) button {
+    color: var(--dark-cyan);
+}
+.container div:nth-child(3) button {
+    color: var(--very-dark-cyan);
+}
+.mb-20 {
+    margin-bottom: 20px;
+}
+.mb-55 {
+    margin-bottom: 55px;
+}
+
+@media (max-width: 863px) {
+    body {
+        padding: 300px 0;
+    }
+    .container  {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .container div:nth-child(1)  {
+        border-radius: 5px 5px 0 0;
+    }
+    .container div:nth-child(3) {
+        border-radius: 0 0 5px 5px ;
+    }
+}
